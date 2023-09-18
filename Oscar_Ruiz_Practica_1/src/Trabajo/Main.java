@@ -5,9 +5,8 @@ public class Main {
 
 
 	public static void main(String[] args) {
-		Menu.Menu();
+		Menu.MenuPrincipal();
 	}
 	
-	// System.out.printf("Hola");
 }
 
