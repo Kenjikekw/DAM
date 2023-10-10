@@ -1,17 +1,22 @@
 package Trabajo;
 
-import java.io.IOException;
 import java.util.Scanner;
 
 public class Menu {
 	static Scanner sc = new Scanner(System.in);
+	
+	/* Pre: Te pide un numero y en case de que haya algun problema te manda de nuevo al metodo anterior
+	 * Pro: Te devuelve el numero o en case de error te manda al metodo anterior
+	 * 
+	 * ORG 15/09/2023
+	 * ORG 18/09/2023 Añadidos nuevos casos
+	 */
 
 	public static int PedirNum(int metodo) {
 		try {
 			int num = sc.nextInt();
 			return num;
 		} catch (Exception a) {
-			LimpiarConsola();
 			System.out.println("Error; debes elegir un numero valido");
 			sc.next();
 			switch(metodo) {
@@ -32,6 +37,11 @@ public class Menu {
 		return 0;
 	};
 
+	/* Pre: Te imprime por pantalla un menu de opciones y te deja elegir que hacer
+	 * Pro: te manada a la clase seleccionada sin problemas
+	 * 
+	 * ORG 15/09/2023
+	 */
 	public static void MenuPrincipal() {
 		System.out
 				.println("Hola, ¿que quieres hacer hoy? \n 1. Leer archivo\n 2. Crear archivo\n 3. Borrar archivo\n 4. Salir");
@@ -51,11 +61,16 @@ public class Menu {
 			break;
 		default:
 			System.out.println("Elige otra vez un numero del menu");
-			LimpiarConsola();
 			MenuPrincipal();
 			break;
 		}
 	}
+	
+	/* Pre: Te pregunta si quieres crear la carpeta en case de no tenerla por defecto
+	 * Pro: Te crea la carpeta o te lleva al menu principal
+	 * 
+	 * ORG 18/09/2023
+	 */
 	
 	public static void MenuCarpeta() {
 		System.out.println(
@@ -70,7 +85,5 @@ public class Menu {
 		}
 	}
 
-	public static void LimpiarConsola() {
-			//Algo
-	}
+	
 }

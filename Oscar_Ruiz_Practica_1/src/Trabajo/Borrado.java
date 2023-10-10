@@ -3,9 +3,16 @@ package Trabajo;
 import java.io.File;
 
 public class Borrado {
+	
+	/* Pre: Te debe dejar eliminar un archivo del directorio de archivos
+	 * Pro: Te lo borra y te lleva de nuevo al menu principal
+	 * 
+	 * ORG 18/09/2023
+	 */
+	
 	public static void Borrar() {
 		File carpeta = new File("./Archivos");
-		if (carpeta.exists() && carpeta.isDirectory()) {
+		if (carpeta.exists() && carpeta.isDirectory()) { // En caso de que no exista el directorio te dice de crearlo
 			File[] archivos = carpeta.listFiles();
 			if (archivos.length <= 0) {
 				System.out.println("Parece ser que no tienes archivos");
