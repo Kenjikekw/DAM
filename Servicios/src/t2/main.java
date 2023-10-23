@@ -1,4 +1,4 @@
-package act1;
+package t2;
 
 import java.awt.*;
 import java.awt.event.*;

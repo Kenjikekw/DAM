@@ -4,6 +4,6 @@
 /**
  * 
  */
-module t2 {
+module Servicios {
 	requires java.desktop;
 }
